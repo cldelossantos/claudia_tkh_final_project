@@ -1,0 +1,42 @@
+{% extends "base.html" %} {% block body %}
+<div class="container">
+  <table class="table">
+    <thead class="table-head">
+      <th class="table-header">
+        SUICIDE RANK
+      </th>
+      <th class="table-header">
+        HAPPINESS RANK
+      </th>
+      <th class="table-header">
+        COUNTRY
+      </th>
+      <th class="table-header">
+        GDP
+      </th>
+      <th class="table-header">
+        LIFE EXPECTENCY
+      </th>
+      <th class="table-header">
+        FREEDOM
+      </th>
+      <th class="table-header">
+        GENEROSITY
+      </th>
+    </thead>
+    <tbody>
+    {% for row in data %}
+      <tr class="table-row">
+        <td class="table-data suicide-col">{{row.suicide_rank}}</td>
+        <td class="table-data">{{row.happiness_rank}}</td>
+        <td class="table-data">{{row.country}}</td>
+        <td class="table-data">{{row.gdp}}</td>
+        <td class="table-data">{{row.life_expectancy}}</td>
+        <td class="table-data">{{row.freedom}}</td>
+        <td class="table-data">{{row.generosity}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
